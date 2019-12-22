@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <section>
+        
+    </section>
+    <div id="niom">
+        
+    </div>
+    <form action="index.html"  id="logout">
+        <button type="submit" >logout</button>
+    </form>
+    <script src="script.js"></script>
+    <script>
+    let nim = document.getElementById('niom');
+    let w = location.href.split('password=')[1]
+    localStorage.getItem('y');
+       for(c =0 ;c < arr.length ;c++){
+           if( arr[c].password == w){
+               localStorage.setItem('x',`
+               <div>
+                    <img src = 'imgs/${arr[c].name}.jpg'>
+                    <h2>${arr[c].name}</h2>
+                    <h3>${arr[c].job}</h3>
+                    <h6>${arr[c].age}</h6>
+                    <p>${arr[c].email}</p>
+               </div>
+               `);
+               nim.innerHTML = localStorage.getItem('x');
+            }
+        }
+        document.getElementById('logout').addEventListener('submit', function(){
+            localStorage.removeItem('x')
+            nim.innerHTML = '';
+       });
+    </script>
+</body>
+</html>
